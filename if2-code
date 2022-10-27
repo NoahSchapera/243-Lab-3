@@ -1,0 +1,22 @@
+//if2
+
+module l3vlog(
+	input D,
+	input Sc,
+	input T,
+	input C,
+	output reg Y
+    );
+	 wire [1:0] sum = D+Sc+T+C;
+	 always@(*)
+	 begin
+		if((D==1)&(sum-C>=2))
+			Y<=1;
+		else if((D==0)&(sum-T>=2))
+			Y<=1;
+		else
+			Y<=0;
+	 end
+
+
+endmodule
