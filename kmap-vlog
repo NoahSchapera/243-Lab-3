@@ -1,0 +1,17 @@
+//kmap:
+
+module l3vlog(
+	input D,
+	input Sc,
+	input T,
+	input C,
+	output reg Y
+    );
+	 
+	 always@(*)
+	 begin
+		Y = (D&Sc)|(Sc&C)|(D&T);
+	 end
+
+
+endmodule
